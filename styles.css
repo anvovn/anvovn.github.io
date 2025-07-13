@@ -29,14 +29,16 @@ html {
 
 .navbar li a {
     display: block;
-    color: #31417c;
+    color: #233266;
+    font-size: 20px;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 25px;
     text-decoration: none;
 }
 
 .navbar li a:hover:not(.active) {
-    font-size: 18px;
+    font-size: 22px;
+    color: maroon;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -51,12 +53,12 @@ html {
   display: flex;
   align-items: center;              /* vertical centering */
   justify-content: space-between;   /* space between text and image */
-  height: 60vh;                     /* full screen height */        
+  height: 60vh;                     /* full screen height */   
+  padding:0 5%;     
 }
 
 .home-text {
   text-align: left;
-  padding-left: 20px;
 }
 
 .home-img {
