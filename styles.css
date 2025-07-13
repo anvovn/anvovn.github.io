@@ -1,8 +1,50 @@
 /* 
 Insert body in here later
-
 */
 body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #F0E7D5;
-    color: #212842;
+    color: #384572;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(211, 211, 211, 0.2);
+}
+
+.navbar li a {
+    display: block;
+    color: #31417c;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.active {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
