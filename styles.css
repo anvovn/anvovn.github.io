@@ -55,7 +55,6 @@ html {
   justify-content: center;   /* space between text and image */
   height: 72vh;                     /* full screen height */   
   padding:0 5%;     
-  gap: 50px;
 }
 
 .home-text {
@@ -67,8 +66,8 @@ html {
 }
 
 .home-img {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   border-radius: 50%;
   border-style: solid;
