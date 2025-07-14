@@ -54,7 +54,7 @@ html {
   display: flex;
   align-items: center;              /* vertical centering */
   justify-content: center;
-  height: 72vh;                     /* full screen height */   
+  height: 67vh;                     /* full screen height */   
   padding:0 5%;
   gap: 70px;
 }
@@ -63,7 +63,7 @@ html {
   font-size: 45px;
   position: relative;
   animation-name: slide-left;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
 }
 
 .home-text p{
