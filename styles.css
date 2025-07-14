@@ -52,18 +52,23 @@ html {
 .home {
   display: flex;
   align-items: center;              /* vertical centering */
-  justify-content: space-between;   /* space between text and image */
-  height: 60vh;                     /* full screen height */   
+  justify-content: center;   /* space between text and image */
+  height: 72vh;                     /* full screen height */   
   padding:0 5%;     
+  gap: 50px;
 }
 
 .home-text {
   text-align: left;
 }
 
+.home-text h1{
+  font-size: 45px;
+}
+
 .home-img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
   border-style: solid;
