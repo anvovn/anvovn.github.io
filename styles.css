@@ -52,9 +52,10 @@ html {
 .home {
   display: flex;
   align-items: center;              /* vertical centering */
-  justify-content: center;   /* space between text and image */
+  justify-content: center;
   height: 72vh;                     /* full screen height */   
-  padding:0 5%;     
+  padding:0 5%;
+  gap: 65px;
 }
 
 .home-text {
@@ -66,8 +67,8 @@ html {
 }
 
 .home-img {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
   border-style: solid;
