@@ -73,12 +73,13 @@ html {
   align-items: center;              /* vertical centering */
   justify-content: center;
   height: 67vh;                     /* full screen height */   
-  padding:0 5%;
+  padding:10px 40px;
   gap: 80px;
 }
 
 .home-text h1{
   position: relative;
+  margin-bottom: 15px;
   font-size: 60px;
   animation-name: slide-left;
   animation-duration: 1.75s;
@@ -86,6 +87,7 @@ html {
 
 .home-text p{
   position: relative;
+  margin-top: 0;
   font-size: 20px;
   animation-name: slide-left;
   animation-duration: 1.5s; 
