@@ -1,6 +1,5 @@
-/* 
-Insert body in here later
-*/
+
+/* Initialize */
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #F0E7D5;
@@ -13,6 +12,22 @@ html {
 
 .hidden {
     visibility: hidden;
+}
+
+/* Animations */
+@keyframes slide-left{
+    0% {opacity: 0; left:-200px; top:0px;}
+    100% {opacity: 1; left:0px; top:0px}
+}
+
+@keyframes slide-right{
+    0% {opacity: 0; left: 200px; top:0px;}
+    100% {opacity: 1; left:0px; top:0px;}
+}
+
+@keyframes slide-down{
+    0% {opacity: 0; top:-50px;}
+    100% {opacity: 1; top:0px;}
 }
 
 .navbar {
@@ -66,63 +81,71 @@ html {
     text-decoration: underline;
 }
 
-.active {
-    font-size: 18px;
+.navbar a.active {
+    color: rgb(95, 14, 14);
     font-weight: bold;
     text-decoration: underline;
 }
 
+/* Home section */
 .home {
-  display: flex;
-  align-items: center;              /* vertical centering */
-  justify-content: center;
-  height: 67vh;                     /* full screen height */   
-  padding:10px 40px;
-  gap: 80px;
+    display: flex;
+    align-items: center;              /* vertical centering */
+    justify-content: center;
+    height: 67vh;                     /* full screen height */   
+    padding:10px 40px;
+    gap: 80px;
 }
 
 .home-text h1{
-  position: relative;
-  margin-bottom: 15px;
-  font-size: 60px;
-  animation-name: slide-left;
-  animation-duration: 1.75s;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 60px;
+    animation-name: slide-left;
+    animation-duration: 1.75s;
 }
 
 .home-text p{
-  position: relative;
-  margin-top: 0;
-  font-size: 20px;
-  animation-name: slide-left;
-  animation-duration: 1.5s; 
+    position: relative;
+    margin-top: 0;
+    font-size: 20px;
+    animation-name: slide-left;
+    animation-duration: 1.5s; 
 }
 
 .home-img {
-  position: relative;
-  width: 360px;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 3px; 
-  border-color: rgb(95, 14, 14);
-  animation-name: slide-right;
-  animation-duration: 1.5s;
+    position: relative;
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px; 
+    border-color: rgb(95, 14, 14);
+    animation-name: slide-right;
+    animation-duration: 1.5s;
 }
 
-@keyframes slide-left{
-    0% {opacity: 0; left:-200px; top:0px;}
-    100% {opacity: 1; left:0px; top:0px}
+/* Skills section */
+.skills {
+    /* Scrolling */
+   
+
 }
 
-@keyframes slide-right{
-    0% {opacity: 0; left: 200px; top:0px;}
-    100% {opacity: 1; left:0px; top:0px;}
+/* Projects section */
+.projects {
+    /* Scrolling */
+   
+
+    
 }
 
-@keyframes slide-down{
-    0% {opacity: 0; top:-50px;}
-    100% {opacity: 1; top:0px;}
+/* Connect section */
+.connect {
+    /* Scrolling */
+    
+    
 }
 
 
