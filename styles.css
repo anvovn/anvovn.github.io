@@ -10,8 +10,22 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 75vh;
+}
+
 .hidden {
-    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Animations */
@@ -39,6 +53,7 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
     background: rgba(211, 211, 211, 0.2);
 }
 
@@ -63,7 +78,6 @@ html {
 .navbar li:nth-child(4){
     animation-delay: 0.6s;
 }
-
 
 .navbar li a {
     display: block;
@@ -91,8 +105,7 @@ html {
 .home {
     display: flex;
     align-items: center;              /* vertical centering */
-    justify-content: center;
-    height: 67vh;                     /* full screen height */   
+    justify-content: center;  
     padding:10px 40px;
     gap: 80px;
 }
@@ -127,25 +140,18 @@ html {
 }
 
 /* Skills section */
-.skills {
-    /* Scrolling */
+#skills {
    
-
 }
 
 /* Projects section */
-.projects {
-    /* Scrolling */
-   
-
-    
+#projects {
+ 
 }
 
 /* Connect section */
-.connect {
-    /* Scrolling */
-    
-    
+#connect {
+  
 }
 
 
