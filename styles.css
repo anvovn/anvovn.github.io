@@ -19,7 +19,6 @@ section {
 
 .hidden {
     opacity: 0;
-    transform: translateX(-100%);
     transition: all 1.5s;
 }
 
@@ -90,13 +89,13 @@ section {
 }
 
 .navbar li a:hover:not(.active) {
-    color: rgb(95, 14, 14);
+    color: rgb(136, 134, 134);
     font-weight: bold;
     text-decoration: underline;
 }
 
 .navbar a.active {
-    color: rgb(95, 14, 14);
+    color: rgb(136, 134, 134);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -134,7 +133,7 @@ section {
     border-radius: 50%;
     border-style: solid;
     border-width: 3px; 
-    border-color: rgb(95, 14, 14);
+    border-color: #233266;
     animation-name: slide-right;
     animation-duration: 1.5s;
 }
