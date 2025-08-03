@@ -1,7 +1,7 @@
 
 /* Initialize */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #F0E7D5;
     color: #233266;
 }
@@ -14,17 +14,18 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 75vh;
+    min-height: 100vh;
 }
 
 .hidden {
     opacity: 0;
     transition: all 1.5s;
+    pointer-events: none;
 }
 
 .show {
     opacity: 1;
-    transform: translateX(0);
+    pointer-events: auto;
 }
 
 /* Animations */
@@ -41,6 +42,11 @@ section {
 @keyframes slide-down{
     0% {opacity: 0; top:-50px;}
     100% {opacity: 1; top:0px;}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .navbar {
@@ -89,13 +95,13 @@ section {
 }
 
 .navbar li a:hover:not(.active) {
-    color: rgb(136, 134, 134);
+    color: #4c598b;
     font-weight: bold;
     text-decoration: underline;
 }
 
 .navbar a.active {
-    color: rgb(136, 134, 134);
+    color: #4c598b;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -103,16 +109,27 @@ section {
 /* Home section */
 .home {
     display: flex;
+    flex-direction: column;
     align-items: center;              /* vertical centering */
     justify-content: center;  
-    padding:10px 40px;
+    padding:40px;
+    padding-bottom: 100px;
     gap: 80px;
+    text-align: center;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
 }
 
 .home-text h1{
     position: relative;
     margin-bottom: 15px;
     font-size: 60px;
+    text-align: left;
     animation-name: slide-left;
     animation-duration: 1.75s;
 }
@@ -121,14 +138,16 @@ section {
     position: relative;
     margin-top: 0;
     font-size: 20px;
+    text-align: left;
     animation-name: slide-left;
     animation-duration: 1.5s; 
 }
 
 .home-img {
     position: relative;
-    width: 360px;
-    height: 360px;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
     border-style: solid;
@@ -138,19 +157,45 @@ section {
     animation-duration: 1.5s;
 }
 
+.rsocials {
+    display: flex;
+    margin-top: 10px;
+}
+
+.rsocials img {
+    width: 40px;
+    height: auto;
+    filter: grayscale();
+    filter: invert(28%) sepia(11%) saturate(1249%) hue-rotate(197deg) brightness(50%) contrast(90%);
+    
+    opacity: 0;
+    animation: fade-in;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.rsocials img:hover {
+    cursor: pointer;
+}
+
+.csocials {
+    padding: 10px;
+}
+
 /* Skills section */
 #skills {
-   
+   padding-top: 10px;
 }
 
 /* Projects section */
 #projects {
- 
+    padding-top: 50px;
 }
 
 /* Connect section */
 #connect {
-  
+    padding-top: 50px;
 }
 
 
