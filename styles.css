@@ -180,11 +180,21 @@ section {
     animation-fill-mode: forwards;
 }
 
+/* Connect links*/
 .rsocials img:hover {
     cursor: pointer;
 }
 
 .csocials {
+    padding: 10px;
+}
+
+.rprojects {
+    display: flex;
+    margin-top: 10px;
+}
+
+.cprojects {
     padding: 10px;
 }
 
@@ -196,6 +206,14 @@ section {
 /* Projects section */
 #projects {
     padding-top: 50px;
+}
+
+#projectembeds {
+    border-radius: 20px;
+    border: 2px solid;
+    padding: 20px;
+    height: 400px;
+    width: 250px;
 }
 
 /* Connect section */
