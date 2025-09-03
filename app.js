@@ -1,56 +1,46 @@
 console.log("Script loaded");
 
-// Setting active
-const navLinks = document.querySelectorAll('.navbar a');
-// Scroll affects all sections with IDs (all on navbar)
-const sections = document.querySelectorAll('section');
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll('.navbar a');
+    const currentPage = window.location.pathname.split("/").pop();
+    const navbar = document.querySelector(".navbar");
 
-let isNavClick = false;
+    // Navbar Animation
+    if (sessionStorage.getItem("navClicked") === "true") {
+        // Skip animation if navigating via navbar
+        navbar.classList.add("no-animation");
+        sessionStorage.removeItem("navClicked");
+    } else {
+        // Play animation normally
+        navbar.classList.add("animate-navbar");
+    }
 
-// On click
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.forEach(l => l.classList.remove('active')); // remove from all
-        link.classList.add('active'); // add to clicked
-        isNavClick = true;
-        setTimeout(() => {
-            isNavClick = false;
-        }, 1000); // Adjust timeout as needed for your scroll duration
-    });
-});
-
-// On scroll
-const observer = new IntersectionObserver(entries => {
-    if (isNavClick) return; // Skip if nav click is in progress
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${id}`) {
-                link.classList.add('active');
-                }
-            });
-            }
+    // Mark navbar click to skip animation on next page
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            sessionStorage.setItem("navClicked", "true");
         });
-    },
-    { threshold: 0.3}
-);
-sections.forEach(section => observer.observe(section));
+    });
 
-// Section animation on scroll
-const hiddenElements = document.querySelectorAll('.hidden');
-const revealObserver = new IntersectionObserver(entries => {
+    // Highlight current page link
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+
+    // Section reveal on scroll
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                // revealObserver.unobserve(entry.target); // optional: animate once
-            } else {
-                entry.target.classList.remove('show');
+                revealObserver.unobserve(entry.target); // optional: animate once
             }
         });
-    },
-);
-hiddenElements.forEach(el => revealObserver.observe(el));
-
+    });
+    hiddenElements.forEach(el => revealObserver.observe(el));
+});
