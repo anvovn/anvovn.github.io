@@ -43,4 +43,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     hiddenElements.forEach(el => revealObserver.observe(el));
+
+    // Skills wheel
+    const skills = document.querySelectorAll("#skills-list li");
+    let currentIndex = 0;
+
+    function updateSkills() {
+        skills.forEach(skill => skill.classList.remove("active"));
+        skills[currentIndex].classList.add("active");
+
+        const itemHeight = 60; // same as line-height
+        const containerMidpoint = 120; // half of .skills-wheel height (300px / 2.5ish)
+        const offset = -(currentIndex * itemHeight) + containerMidpoint;
+
+        document.getElementById("skills-list").style.transform = `translateY(${offset}px)`;
+    }
+
+    function rotateSkills() {
+        currentIndex = (currentIndex + 1) % skills.length;
+        updateSkills();
+    }
+
+    // Start rotation
+    updateSkills();
+    setInterval(rotateSkills, 2000); // rotates every 2s
 });

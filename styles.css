@@ -65,7 +65,7 @@ section {
 .navbar li {
     position: relative;
     opacity: 0;
-    animation: slide-down 1s forwards;
+    animation: slide-down 1.75s forwards;
 }
 
 .no-animation li {
@@ -83,10 +83,6 @@ section {
 
 .navbar li:nth-child(3){
     animation-delay: 0.4s;
-}
-
-.navbar li:nth-child(4){
-    animation-delay: 0.6s;
 }
 
 .navbar li a {
@@ -127,9 +123,12 @@ section {
     flex-direction: row;
     align-items: center;
     gap: 50px;
-    border: 3px solid #233266;
-    border-radius: 100px;
+    
+    background: #F0E7D5;
+    border: 1px solid #233266;
+    border-radius: 24px;
     padding: 80px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .home-text h1{
@@ -163,6 +162,111 @@ section {
     animation-name: slide-right;
     animation-duration: 1.5s;
 }
+
+#skills {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.skills-wheel {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-wheel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.6s ease;
+}
+
+.skills-wheel li {
+  font-size: 22px;
+  line-height: 60px;   /* give more vertical spacing */
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+.skills-wheel li.active {
+  font-size: 32px;
+  font-weight: bold;
+  opacity: 1;
+  transform: scale(1.2);
+  color: #233266;
+}
+
+#timeline {
+  padding: 80px 10%;
+}
+
+#timeline .title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #233266;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #233266;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  background: #F0E7D5;
+  border: 1px solid #233266;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: inline-block;
+  max-width: 90%;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #233266;
+}
+
+.timeline-content .date {
+  font-size: 0.9em;
+  color: #555;
+  display: block;
+  margin-bottom: 10px;
+}
+
 
 .rsocials {
     display: flex;
