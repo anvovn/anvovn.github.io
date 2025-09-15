@@ -267,6 +267,32 @@ section {
   margin-bottom: 10px;
 }
 
+/* Experience timeline: slide out from center */
+.timeline-item {
+  opacity: 0;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+/* Start closer to the center line, then slide outward */
+.timeline-item:nth-child(odd) {
+  transform: translateX(40px);
+}
+
+.timeline-item:nth-child(even) {
+  transform: translateX(-40px);
+}
+
+/* When the section is revealed, slide items to their final spots */
+#experience.show .timeline-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: slight stagger for nicer effect */
+#experience.show .timeline-item:nth-child(1) { transition-delay: 0.0s; }
+#experience.show .timeline-item:nth-child(2) { transition-delay: 0.5s; }
+#experience.show .timeline-item:nth-child(3) { transition-delay: 1s; }
+#experience.show .timeline-item:nth-child(4) { transition-delay: 1.5s; }
 
 .rsocials {
     display: flex;
