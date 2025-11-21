@@ -1,141 +1,282 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>An Vo | Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Vo | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css"/>
     <script defer src="app.js"></script>
 </head>
 <body>
-
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="connect.html">Connect</a></li>
-    </ul>
-
-    <section id="home" class="hidden">
-        <div class="home-content">
-            <div class="home-text">
-                <h1> Hello, my name is An.</h1>
-                <p>I'm a Computer Science student at the University of Oregon minoring
-                    in Mathematics, currently interested in HPC.
-                </p>
-            </div>
-            <img src="imgs/me.jpg" class="home-img">
-        </div>
-
-    </section>
-
-    <section id="experience" class="hidden">
-        <h2 class="title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Teaching Assistant</h3>
-                    <p class="short">University of Oregon — Sept 2024 - April 2025</p>
-                    <p class="details">TA'd for Computer Science III and Introductory Programming and Problem-Solving.
-                        Helped students break down complex problems, debug code and optimize solutions.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Mathematics Paper Marker</h3>
-                    <p class="short">University of Oregon — March 2024 - June 2025</p>
-                    <p class="details">Graded homework assignments for Calculus III, Discrete Math I, and Statistics I</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- <section id="skills" class="hidden">
-        <h2 class="title">Skills</h2>
-        <div class="skills-wheel">
-            <ul id="skills-list">
-            <li>Python</li>
-            <li>C/C++</li>
-            <li>HTML/CSS</li>
-            <li>Javascript</li>
-            <li>Git</li>
-            <li>Mac/Linux/Windows</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">An Vo</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
-    </section> -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <div class="hero-text-wrapper">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Hello, my name is An.</h1>
+                        <p class="hero-subtitle">Computer Science student @ the University of Oregon. I'm currently interested in systems and software development.</p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn-primary">View My Work</a>
+                            <a href="#contact" class="btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="imgs/me.jpg" alt="An Vo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container fade-in-section">
+            <h2 class="section-title">Skills</h2>
+            
+            <!-- Skills Slider -->
+            <!-- <div class="skills-slider-container">
+                <div class="skills-slider">
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">C/C++</div>
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">TensorFlow</div>
+                    <div class="skill-item">Git</div>
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">TypeScript</div> -->
+                    <!-- Duplicate for seamless loop -->
+                    <!-- <div class="skill-item">Python</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">C/C++</div>
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">TensorFlow</div>
+                    <div class="skill-item">Git</div>
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">TypeScript</div>
+                </div>
+            </div> -->
+            
+            <div class="about-content">
+                <div class="about-split">
+                    <div class="about-text-left">
+                        <p class="large-text">Languages: Primarily working on mastering techniques and concepts in C/C++ and Python, while using HTML, CSS, and Javascript
+                            on the side for simple webpages.</p>
+                    </div>
+                    <div class="about-divider">
+                        <div class="divider-line"></div>
+                    </div>
+                    <div class="about-text-right">
+                        <p class="large-text">Frameworks/Libraries: Docker, Flask</p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>2+</h3>
+                        <p>Years Experience Coding</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Multiple</h3>
+                        <p>Courses TA'd For</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>CS + Math</h3>
+                        <p>Focused</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-container fade-in-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Teaching Assistant</h3>
+                            <span class="timeline-date">Sept 2024 - April 2025</span>
+                        </div>
+                        <p class="timeline-company">University of Oregon</p>
+                        <p class="timeline-description">TA'd for Computer Science III and Introductory Programming and Problem-Solving. Helped students break down complex problems, debug code, and optimize solutions.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Teaching</span>
+                            <span class="tag">Mentoring</span>
+                            <span class="tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Mathematics Paper Marker</h3>
+                            <span class="timeline-date">March 2024 - June 2025</span>
+                        </div>
+                        <p class="timeline-company">University of Oregon</p>
+                        <p class="timeline-description">Graded homework assignments for Calculus III, Discrete Math I, and Statistics I, ensuring accuracy and providing constructive feedback to students.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Mathematics</span>
+                            <span class="tag">Analysis</span>
+                            <span class="tag">Education</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects-section fade-in-section">
+        <h1 class="title">Projects</h1>
+
+        <div class="grid">
+            <div class="project-card">
+            <img src="imgs/website.png" alt="Project screenshot" class="project-img">
+            <div class="project-content">
+                <h2 class="project-name">Personal Website</h2>
+                <p>A simple and intuitive website using HTML, CSS and Javascript.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+                <a href="https://github.com/anvovn/anvovn.github.io" class="project-link">View Project Details</a>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <img src="imgs/hpc.jpg" alt="Project screenshot" class="project-img">
+            <div class="project-content">
+                <h2 class="project-name">Parallelized SpMV</h2>
+                <p>Parallelization of sparse matrix vector multiplication using the OpenMP library.</p>
+                <div class="project-tags">
+                    <span>C</span>
+                </div>
+                <a href="#" class="project-link">View Project Details</a>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <div class="project-content">
+                <h2 class="project-name">Coming soon</h2>
+                <p>More in the works...</p>
+                <div class="project-tags">
+                    
+                </div>
+                <a href="#" class="project-link">View Project Details</a>
+            </div>
+            </div>
+
+            <!-- Duplicate cards for seamless loop -->
+            <div class="project-card">
+            <img src="imgs/website.png" alt="Project screenshot" class="project-img">
+            <div class="project-content">
+                <h2 class="project-name">Personal Website</h2>
+                <p>A simple and intuitive website using HTML, CSS and Javascript.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+                <a href="https://github.com/anvovn/anvovn.github.io" class="project-link">View Project Details</a>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <img src="imgs/hpc.jpg" alt="Project screenshot" class="project-img">
+            <div class="project-content">
+                <h2 class="project-name">Parallelized SpMV</h2>
+                <p>Parallelization of sparse matrix vector multiplication using the OpenMP library.</p>
+                <div class="project-tags">
+                    <span>C</span>
+                </div>
+                <a href="#" class="project-link">View Project Details</a>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <div class="project-content">
+                <h2 class="project-name">Coming soon</h2>
+                <p>More in the works...</p>
+                <div class="project-tags">
+                    
+                </div>
+                <a href="#" class="project-link">View Project Details</a>
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container fade-in-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-text">Interested in collaborating or learning more about my work? Feel free to reach out.
+            </p>
+            <div class="contact-social-links">
+                <a href="https://www.linkedin.com/in/an-vo-225675237/" target=_blank class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/anvovn" target=_blank class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/anvovn" target=_blank class="social-icon" aria-label="X">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/anvovn/" target=_blank class="social-icon" aria-label="X">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="contact-cta">
+                <a href="mailto:your.email@example.com" class="btn-primary">Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 An Vo. All rights reserved.</p>
+            <div class="footer-links">
+                <!-- <a href="#" class="footer-link">LinkedIn</a>
+                <a href="#" class="footer-link">GitHub</a>
+                <a href="#" class="footer-link">Twitter</a> -->
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
 
-<!-- Archive
-
-    <h2>Information</h2>
-    <p>
-        <u>Major/Minor:</u> Computer Science / Math <br>
-        <u>Interest(s):</u> High Performance Computing <br>
-        <u>Languages/Frameworks/Tools:</u> Python, C/C++, Swift, Git <br>
-    </p>
-    <hr>
-    <h2>Projects</h2>
-    <p>
-        <b>MNIST</b> - The "hello world" of AI projects. I trained a machine learning model
-        to recognize handwritten numbers to roughly 90% accuracy.
-
-    </p>
-
-    <hr>
-
-    <h2>Classes List</h2>
-    <table>
-        <thead>
-            <tr>
-                <td>Class</td>
-                <td>Name </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>CS210</td>
-                <td>Computer Science I</td>
-            </tr>
-            <tr>
-                <td>CS211</td>
-                <td>Computer Science II</td>
-            </tr>
-            <tr>
-                <td>CS212</td>
-                <td>Computer Science III</td>
-            </tr>
-            <tr>
-                <td>CS313</td>
-                <td>Intermediate Data Structures</td>
-            </tr>
-            <tr>
-                <td>CS314</td>
-                <td>Computer Organization</td>
-            </tr>
-            <tr>
-                <td>CS315</td>
-                <td>Intermediate Algorithms</td>
-            </tr>
-            <tr>
-                <td>CS330</td>
-                <td>C/C++ & Unix</td>
-            </tr>
-            <tr>
-                <td>CS407</td>
-                <td>CS Career & Internship Seminar</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <hr>
-
-    <h2>Hobbies</h2>
-    <ul>
-        <li>Powerlifting/weightlifting</li>
-        <li>Football</li>
-        <li>Competitive gaming</li>
-        
-    </ul> -->
