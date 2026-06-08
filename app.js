@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initHeroAnimation();
   initParallaxEffects();
+  initSkillsWheel();
 });
 
 // ===================================
@@ -33,13 +34,22 @@ function initNavbarScroll() {
 
 function handleNavbarScroll(navbar, lastScrollTop) {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  // Add scrolled class when scrolled past hero
+
   if (scrollTop > 100) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
+
+  const darkSections = ['about', 'contact'];
+  const navbarBottom = navbar.getBoundingClientRect().bottom;
+  const overDark = darkSections.some(id => {
+    const section = document.getElementById(id);
+    if (!section) return false;
+    const rect = section.getBoundingClientRect();
+    return rect.top < navbarBottom && rect.bottom > 0;
+  });
+  navbar.classList.toggle('navbar--light', overDark);
 }
 
 // ===================================
@@ -374,5 +384,72 @@ function initMobileNav() {
 window.addEventListener('resize', debounce(() => {
   initMobileNav();
 }, 250));
+
+// ===================================
+// Skills Wheel — auto-rotate + scroll to spin
+// ===================================
+
+function initSkillsWheel() {
+  const wrapper = document.querySelector('.skills-wheel-zone');
+  const wheel = document.querySelector('.skills-wheel');
+  if (!wrapper || !wheel) return;
+
+  const AUTO_SPEED = 360 / 22000; // degrees per ms
+  let angle = 0;
+  let isHovered = false;
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragStartAngle = 0;
+  let lastTimestamp = null;
+
+  function tick(timestamp) {
+    if (!isHovered && !isDragging) {
+      if (lastTimestamp !== null) {
+        angle += AUTO_SPEED * (timestamp - lastTimestamp);
+      }
+      lastTimestamp = timestamp;
+    } else {
+      lastTimestamp = null;
+    }
+    wheel.style.transform = `rotateY(${angle}deg)`;
+    requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+
+  wrapper.addEventListener('mouseenter', () => { isHovered = true; });
+  wrapper.addEventListener('mouseleave', () => {
+    isHovered = false;
+    if (isDragging) {
+      isDragging = false;
+      wrapper.style.cursor = 'grab';
+    }
+  });
+
+  wrapper.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    dragStartX = e.clientX;
+    dragStartAngle = angle;
+    wrapper.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStartX;
+    angle = dragStartAngle + dx * 0.3;
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    wrapper.style.cursor = 'grab';
+  });
+
+  wrapper.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    angle += e.deltaY * 0.2;
+  }, { passive: false });
+}
 
 initMobileNav();

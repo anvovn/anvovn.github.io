@@ -6,7 +6,7 @@
     <title>An Vo | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css"/>
     <script defer src="app.js"></script>
@@ -54,61 +54,60 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="section-container fade-in-section">
-            <h2 class="section-title">Skills</h2>
-            
-            <!-- Skills Slider -->
-            <!-- <div class="skills-slider-container">
-                <div class="skills-slider">
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">C/C++</div>
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">React</div>
-                    <div class="skill-item">Node.js</div>
-                    <div class="skill-item">TensorFlow</div>
-                    <div class="skill-item">Git</div>
-                    <div class="skill-item">SQL</div>
-                    <div class="skill-item">TypeScript</div> -->
-                    <!-- Duplicate for seamless loop -->
-                    <!-- <div class="skill-item">Python</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">C/C++</div>
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">React</div>
-                    <div class="skill-item">Node.js</div>
-                    <div class="skill-item">TensorFlow</div>
-                    <div class="skill-item">Git</div>
-                    <div class="skill-item">SQL</div>
-                    <div class="skill-item">TypeScript</div>
+            <h2 class="section-title about-header">Skills</h2>
+            <p class="skills-summary">Focused on systems programming and software development, working primarily in C/C++ and Python while building web interfaces with HTML, CSS, and JavaScript.</p>
+            <div class="skills-wheel-wrapper">
+                <div class="skills-wheel-zone">
+                <div class="skills-wheel">
+                    <div class="skill-card" style="--i:0">
+                        <span class="skill-card-name">Python</span>
+                        <span class="skill-card-type">Language</span>
+                    </div>
+                    <div class="skill-card" style="--i:1">
+                        <span class="skill-card-name">C / C++</span>
+                        <span class="skill-card-type">Language</span>
+                    </div>
+                    <div class="skill-card" style="--i:2">
+                        <span class="skill-card-name">JavaScript</span>
+                        <span class="skill-card-type">Language</span>
+                    </div>
+                    <div class="skill-card" style="--i:3">
+                        <span class="skill-card-name">HTML / CSS</span>
+                        <span class="skill-card-type">Web</span>
+                    </div>
+                    <div class="skill-card" style="--i:4">
+                        <span class="skill-card-name">Flask</span>
+                        <span class="skill-card-type">Framework</span>
+                    </div>
+                    <div class="skill-card" style="--i:5">
+                        <span class="skill-card-name">Docker</span>
+                        <span class="skill-card-type">Tool</span>
+                    </div>
+                    <div class="skill-card" style="--i:6">
+                        <span class="skill-card-name">Git</span>
+                        <span class="skill-card-type">Tool</span>
+                    </div>
+                    <div class="skill-card" style="--i:7">
+                        <span class="skill-card-name">SQL</span>
+                        <span class="skill-card-type">Language</span>
+                    </div>
+                    <div class="skill-card" style="--i:8">
+                        <span class="skill-card-name">TypeScript</span>
+                        <span class="skill-card-type">Language</span>
+                    </div>
+                    <div class="skill-card" style="--i:9">
+                        <span class="skill-card-name">React</span>
+                        <span class="skill-card-type">Framework</span>
+                    </div>
+                    <div class="skill-card" style="--i:10">
+                        <span class="skill-card-name">Bash</span>
+                        <span class="skill-card-type">Tool</span>
+                    </div>
+                    <div class="skill-card" style="--i:11">
+                        <span class="skill-card-name">Linux</span>
+                        <span class="skill-card-type">Tool</span>
+                    </div>
                 </div>
-            </div> -->
-            
-            <div class="about-content">
-                <div class="about-split">
-                    <div class="about-text-left">
-                        <p class="large-text">Languages: Primarily working on mastering techniques and concepts in C/C++ and Python, while using HTML, CSS, and Javascript
-                            on the side for simple webpages.</p>
-                    </div>
-                    <div class="about-divider">
-                        <div class="divider-line"></div>
-                    </div>
-                    <div class="about-text-right">
-                        <p class="large-text">Frameworks/Libraries: Docker, Flask</p>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>2+</h3>
-                        <p>Years Experience Coding</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>Multiple</h3>
-                        <p>Courses TA'd For</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>CS + Math</h3>
-                        <p>Focused</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -127,7 +126,7 @@
                             <span class="timeline-date">Sept 2024 - Present</span>
                         </div>
                         <p class="timeline-company">University of Oregon</p>
-                        <p class="timeline-description">TA'd for Computer Science III and Introductory Programming and Problem-Solving. Helped students break down complex problems, debug code, and optimize solutions.</p>
+                        <p class="timeline-description">TA'd for "C/Unix/Data Structures" and "Introductory Programming and Problem-Solving" courses. Helped students break down complex problems, debug code, and optimize solutions.</p>
                         <div class="timeline-tags">
                             <span class="tag">Teaching</span>
                             <span class="tag">Mentoring</span>
@@ -157,88 +156,73 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="projects-section fade-in-section">
-        <h1 class="title">Projects</h1>
-
-        <div class="grid">
-
-            <div class="project-card">
-                <img src="imgs/fft.png" alt="Project screenshot" class="project-img">
-                <div class="project-content">
-                    <h2 class="project-name">Parallelized FFT</h2>
-                    <p>Parallelization of various FFT algorithms using the OpenMP library.</p>
-                    <div class="project-tags">
-                        <span>C++</span>
-                        <span>OpenMP</span>
-                        <span>Bash</span>
-                    </div>
-                    <a href="https://github.com/anvovn/anvovn.github.io" class="project-link">View Project Details</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="imgs/website.png" alt="Project screenshot" class="project-img">
-                <div class="project-content">
-                    <h2 class="project-name">Personal Website</h2>
-                    <p>A simple and intuitive website using HTML, CSS and Javascript.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Javascript</span>
-                    </div>
-                    <a href="https://github.com/anvovn/anvovn.github.io" class="project-link">View Project Details</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-            <div class="project-content">
-                <h2 class="project-name">Coming soon</h2>
-                <p>More in the works...</p>
-                <div class="project-tags">
-                    
-                </div>
-            </div>
-            </div>
-
-            <div class="project-card">
-            <img src="imgs/fft.png" alt="Project screenshot" class="project-img">
-            <div class="project-content">
-                <h2 class="project-name">Parallelized FFT</h2>
-                <p>Parallelization of various FFT algorithms using the OpenMP library.</p>
-                <div class="project-tags">
-                    <span>C++</span>
-                    <span>OpenMP</span>
-                    <span>Bash</span>
-                </div>
-                <a href="https://github.com/anvovn/uoregon-cs431531-f25-group" class="project-link">View Project Details</a>
-            </div>
-            </div>
-
-            <div class="project-card">
-                <img src="imgs/website.png" alt="Project screenshot" class="project-img">
-                <div class="project-content">
-                    <h2 class="project-name">Personal Website</h2>
-                    <p>A simple and intuitive website using HTML, CSS and Javascript.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Javascript</span>
-                    </div>
-                    <a href="https://github.com/anvovn/anvovn.github.io" class="project-link">View Project Details</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-            <div class="project-content">
-                <h2 class="project-name">Coming soon</h2>
-                <p>More in the works...</p>
-                <div class="project-tags">
-                    
-            </div>
-            </div>
-
+    <section id="projects" class="projects-section">
+        <div class="projects-header fade-in-section">
+            <h2 class="projects-title">Projects</h2>
         </div>
-        </section>
+
+        <a href="https://github.com/anvovn/chainagent" target="_blank" class="project-row fade-in-section">
+            <div class="project-row-left">
+                <p class="project-row-desc">An AI agent for storefront owners to streamline shopify processes</p>
+                <div class="project-row-tags"><span>Next.js</span><span>FastAPI</span><span>React</span><span>TS + JSX</span><span>Python</span><span>Gemini</span><span>ElevenLabs</span><span>Snowflake</span><span>Shopify</span><span>Twilio/SendGrid</span></div>
+            </div>
+            <div class="project-row-img">
+                <img src="imgs/chainagent.png" alt="chainagent">
+            </div>
+            <div class="project-row-name">
+                <h2>Chain Agent</h2>
+            </div>
+        </a>
+
+        <a href="https://github.com/anvovn/app4seniors" target="_blank" class="project-row fade-in-section">
+            <div class="project-row-left">
+                <p class="project-row-desc">An app for family members to monitor their elderly loved ones</p>
+                <div class="project-row-tags"><span>Node.js</span><span>PostgreSQL</span><span>HTML/CSS</span><span>JS</span></div>
+            </div>
+            <div class="project-row-img">
+                <img src="imgs/eldercare.png" alt="eldercare">
+            </div>
+            <div class="project-row-name">
+                <h2>Eldercare</h2>
+            </div>
+        </a>
+
+        <a href="https://github.com/anvovn/uoregon-cs431531-f25-group" target="_blank" class="project-row fade-in-section">
+            <div class="project-row-left">
+                <p class="project-row-desc">Parallelization of various FFT algorithms using the OpenMP library.</p>
+                <div class="project-row-tags"><span>C++</span><span>OpenMP</span><span>Bash</span></div>
+            </div>
+            <div class="project-row-img">
+                <img src="imgs/fft.png" alt="Parallelized FFT">
+            </div>
+            <div class="project-row-name">
+                <h2>Parallel FFT</h2>
+            </div>
+        </a>
+
+        <a href="https://github.com/anvovn/anvovn.github.io" target="_blank" class="project-row fade-in-section">
+            <div class="project-row-left">
+                <p class="project-row-desc">A simple and intuitive personal portfolio.</p>
+                <div class="project-row-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            </div>
+            <div class="project-row-img">
+                <img src="imgs/website.png" alt="Personal Website">
+            </div>
+            <div class="project-row-name">
+                <h2>Website</h2>
+            </div>
+        </a>
+
+        <div class="project-row project-row--muted fade-in-section">
+            <div class="project-row-left">
+                <p class="project-row-desc">More in the works...</p>
+            </div>
+            <div class="project-row-img"></div>
+            <div class="project-row-name">
+                <h2>Coming Soon</h2>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -253,9 +237,6 @@
                 <a href="https://github.com/anvovn" target=_blank class="social-icon" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://x.com/anvovn" target=_blank class="social-icon" aria-label="X">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
                 <a href="https://www.instagram.com/anvovn/" target=_blank class="social-icon" aria-label="X">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -269,7 +250,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <p>&copy; 2025 An Vo. All rights reserved.</p>
+            <p>&copy; 2026 An Vo. All rights reserved.</p>
             <div class="footer-links">
                 <!-- <a href="#" class="footer-link">LinkedIn</a>
                 <a href="#" class="footer-link">GitHub</a>
