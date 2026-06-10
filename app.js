@@ -1,7 +1,3 @@
-// ===================================
-// Palantir-Inspired Scroll & Transitions
-// ===================================
-
 document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initSmoothScrolling();
